@@ -121,6 +121,6 @@ LABEL vcs-url="https://github.com/BarneyBuffet"
 
 VOLUME [ "${DATA_DIR}" ]
 WORKDIR ${DATA_DIR}
-EXPOSE 9050/tcp 9051/tcp
-ENTRYPOINT ["/sbin/tini", "--", "entrypoint.sh"]
+#EXPOSE 9050/tcp 9051/tcp
+ENTRYPOINT ["/sbin/tini", "--", "/usr/local/bin/entrypoint.sh"]
 CMD ["tor", "-f", "/tor/torrc"]
