@@ -67,7 +67,7 @@ RUN apk --no-cache add --update \
 ENV DATA_DIR=/tor
 
 ## Create tor directories
-RUN mkdir -p ${DATA_DIR} && chown -R nonroot:nonroot ${DATA_DIR} && chmod -R go+rX,u+rwX ${DATA_DIR}
+RUN mkdir -p ${DATA_DIR} && chown -R nonroot:nonroot ${DATA_DIR} && chmod -R go-rwx,u+rwX ${DATA_DIR}
 
 ## Copy compiled Tor daemon from tor-builder
 COPY --from=tor-builder /usr/local/ /usr/local/
