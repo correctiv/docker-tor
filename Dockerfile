@@ -1,6 +1,6 @@
 ## ALPINE_VER can be overwritten with --build-arg
 ## Pinned version tag from https://hub.docker.com/_/alpine
-ARG ALPINE_VER=3.14
+ARG ALPINE_VER=3.20.2
 
 ########################################################################################
 ## STAGE ONE - BUILD
@@ -9,7 +9,7 @@ FROM alpine:$ALPINE_VER AS tor-builder
 
 ## TOR_VER can be overwritten with --build-arg at build time
 ## Get latest version from > https://dist.torproject.org/
-ARG TOR_VER=0.4.6.7
+ARG TOR_VER=0.4.8.12
 ARG TORGZ=https://dist.torproject.org/tor-$TOR_VER.tar.gz
 ARG TOR_KEY=0x6AFEE6D49E92B601
 
