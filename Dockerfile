@@ -111,13 +111,13 @@ ENV PUID= \
     TOR_RELAY="false"
 
 ## Label the docker image
-LABEL maintainer="Barney Buffet <BarneyBuffet@tutanota.com>"
+LABEL maintainer="Alexander Kasper <alexander.kasper@correctiv.org>"
 LABEL name="Tor network client (daemon)"
 LABEL version=$TOR_VER
-LABEL description="A docker image for tor"
+LABEL description="A docker image for tor - optimized for hidden_service "
 LABEL license="GNU"
 LABEL url="https://www.torproject.org"
-LABEL vcs-url="https://github.com/BarneyBuffet"  
+LABEL vcs-url="https://github.com/correctiv"  
 
 VOLUME [ "${DATA_DIR}" ]
 WORKDIR ${DATA_DIR}
