@@ -32,6 +32,12 @@ This image exposes port `9050/tcp` and `9051/tcp`.
 
 Data can be persisted and config manual edited by mounting the `/tor`
 
+## How to build this image
+
+```bash
+docker build -t correctiv/tor .
+```
+
 ## How to use this image
 
 ```bash
@@ -47,7 +53,7 @@ version: "3.9"
 services:
   tor:
     container_name: tor
-    image: barneybuffet/tor:latest
+    image: correctiv/tor:latest
     environment:
       TOR_LOG_CONFIG:'false'
       TOR_PROXY: 'true'
