@@ -61,8 +61,7 @@ RUN apk --no-cache add --update \
     libevent \
     tini bind-tools su-exec \
     openssl shadow coreutils \
-    python3 py3-pip \
-    && pip install nyx
+    python3 py3-pip 
 
 ## Bitcoind data directory
 ENV DATA_DIR=/tor
